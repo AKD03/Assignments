@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Storage</title>
+    <script>
+        function validateform() {
+            var name = document.myform.username.value;
+            if (name.length == null || name == "" || name.length < 3 || name == /^[a-zA-Z\s]+$/) {
+                alert("Enter your name again")
+                return false;
+            }
+            else {
+                sessionStorage.setItem('msg', 'This is a session storage')
+                sessionStorage.setItem('msg2', name)
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="sessionStorageGet.html" name="myform" onsubmit=" return validateform()" method="POST">
+        <label>Enter Username</label>
+        <input type="text" name="username" value="" placeholder="Username">
+        <input type="Submit" name="button" value="register">
+    </form>
+
+</body>
+
+</html>

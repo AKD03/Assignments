@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    Select your favourite fruits: <select name="fruits" id="fruit" onchange="fruits()">
+      <option selected="" value="Default">--Select--</option>
+      <option value="Apple">Apple</option>
+      <option value="Mango">Mango</option>
+      <option value="Guava">Guava</option>
+      <option value="Orange">Orange</option>
+    </select>
+  </div>
+
+  <br>
+  <div> <span id="display"></span></div>
+
+  <script>
+    function fruits() {
+      var name = document.getElementById("fruit").value;
+      if (name == "Apple") {
+        var fruitTypes = ['Kashmiri Apple', 'Afghani Apple', 'Nagpur Apple', 'Orchard Apple'];
+        document.getElementById("display").innerHTML = fruitTypes.join("<br>");
+
+      } else if (name == "Mango") {
+        var fruitTypes = ['Northern Mango', 'Mango', 'Western Mango', 'Langda Mango'];
+        document.getElementById("display").innerHTML = fruitTypes.join("<br>");
+      } else if (name == "Guava") {
+        var fruitTypes = ['Winter Guava', 'Kerala Special Guava', 'Orchard Guava', ' Meghalaian Guava'];
+        document.getElementById("display").innerHTML = fruitTypes.join("<br>");
+      } else if (name == "Orange") {
+        var fruitTypes = ['Nagpur Orange', 'Lembo Orange', 'North Orange', 'Real Orange'];
+        document.getElementById("display").innerHTML = fruitTypes.join("<br>");
+      }
+    }
+  </script>
+</body>
+
+</html>
