@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate(){
+            var name = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var email=document.getElementById('email').value;
+            var email =document.getElementById('password'.value)
+            var phone=document.getElementById('phone').value;
+            var phone = document.getElementById('phone').value;
+
+            var arr = ["sachin", "tom", "radhe"];
+            
+            var reg = /^[a-zA-Z\s]+$/;
+
+            if(name == "" || !(name.mat) )
+            {
+                alert("Name cannot be empty or number or less than 3 or greater than 15");
+                document.getElementById('name').focus();
+            }
+            else if(!(password.match(pattern)) || passwordLength<7 || passwordLength>15)
+            {
+                alert("password must contain upper case, lower case, special character, number and length should be between 7-14");
+                document.getElementById('password').focus();
+            }
+            else if(isNaN(phone) || phoneLength!=10 )
+            {
+                alert("Phone number cannot be null or string and should be 10 digits");
+                document.getElementById('phone').focus();
+            }
+         
+            else if(nameList.indexOf(name) !== -1 )
+            {
+                alert('user name exists');
+                document.getElementById('name').focus();
+            }
+            
+            else
+            {
+                document.getElementById("print").innerHTML="successfully registered";
+            }
+            
+        }
+           
+            
+    </script>
+</head>
+<body>
+    <form  id="myform" >
+        User Name : <input type="text" id = "username"><br>
+        Password :  <input type="password" id = "password"><br>
+        E-mail : <input type="email" id="email" required><br>
+        Phone Number: <input type="number" id="phone"> <br>
+        <input type="submit" value="submit" onclick="validate()">
+
+    </form>
+</body>
+<div id="print"></div>
+</html>
