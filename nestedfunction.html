@@ -4,16 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nested function</title>
+    <title>nested functions</title>
     <script>
+        var arr = ["sachin", "tom", "radhe"];
         function register() {
             var name = document.myform.username.value;
             function validateform() {
                 if (name.length == null || name == "" || name.length < 3) {
-                    alert("Enter your Name")
+                    alert("Name cannot be less than 3 letters")
                     return false;
                 }
+            }
+            function validateName() {
+                if(name.length >2 ){
+                for (let i in arr) {
+                    if (name == arr[i]) {
+                        alert("Name already exist")
+                        return false
+                    }
                 }
+                alert("welcome user")
+                return true;
+
+            }
+            else{
+                alert("Name cannot be less than 3 letters")
+            }
+        }
+            return validateName();
             return validateform();
         }
         register();
