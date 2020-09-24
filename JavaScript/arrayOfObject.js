@@ -33,11 +33,13 @@ var mobiles = [{
 for (const attr in mobiles) {
     var b = mobiles[attr];
     if (b instanceof Array) {
-        for (const i in b)
-            console.log("Array:" + b[i])
+        b.forEach(i=>
+            {
+                console.log("Array:" + b[i])
+            })
     } else if (typeof (b) == 'object') {
-        for (var key in b) {
-            console.log(key + " : " + b[key])
+        for (let p in b) {
+            console.log(p.toUpperCase()+ " : " , b[p])
         }
     } else if (typeof b == 'function') {
         b();
@@ -45,3 +47,4 @@ for (const attr in mobiles) {
         console.log(b)
     }
 }
+
